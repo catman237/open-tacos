@@ -150,7 +150,10 @@ export const computeStatsBarPercentPerAreaFromClimbs = (climbs) => {
         }
       };
     });
-    areasToPercentAndColors[key] = computeClimbingPercentsAndColors(formatted);
+    areasToPercentAndColors[key] = {
+      totalClimbs: formatted ? formatted.length : 0,
+      ...computeClimbingPercentsAndColors(formatted)
+    }
   })
 
   return areasToPercentAndColors;

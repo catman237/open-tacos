@@ -1,7 +1,7 @@
 import React from "react";
 import Card from './card';
 import RouteTypeChips from "./RouteTypeChips";
-import RouteGradeGip from "./RouteGradeChip";
+import RouteGradeChip from "./RouteGradeChip";
 
 function RouteCard({route_name, type, safety, YDS, onPress}) {
   return (
@@ -15,7 +15,7 @@ function RouteCard({route_name, type, safety, YDS, onPress}) {
       </h2>
       <div className="mt-4 flex justify-between items-center">
         <div>
-          <RouteGradeGip yds={YDS} safety={safety}></RouteGradeGip>
+          <RouteGradeChip yds={YDS} safety={safety}></RouteGradeChip>
           <RouteTypeChips type={type}></RouteTypeChips>
         </div>
       </div>
